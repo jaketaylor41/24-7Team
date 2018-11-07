@@ -122,7 +122,7 @@
 
 
 <div class="videoContainer">
-<video id="video" class="homeVideo" controls autoplay>
+<video id="video" class="homeVideo" controls>
     <source src="video/24-7Team.mp4" type="video/mp4">
 </video>
 </div>

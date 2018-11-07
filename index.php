@@ -20,17 +20,23 @@
         body{
         }
 
+
+        .videoContainer{
+            padding: 5px;
+
+        }
+
         .homeVideo{
             width: 1000px;
             margin: 0 auto;
             display: block;
             box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+
         }
 
         .logo {
-            width: 50%;
-            padding-top: 10px;
-            margin-left: 7%;
+            width: 90%;
+            padding-top: 6%;
             transition: .5s ease;
             backface-visibility: hidden;
         }
@@ -40,7 +46,7 @@
         }
 
         .vermilion{
-            width: 15%;
+            width: 40%;
             transition: .5s ease;
             backface-visibility: hidden;
             float: left;
@@ -53,9 +59,9 @@
         }
 
         .kellerWilliams{
-            width: 15%;
+            width: 40%;
             float: right;
-            margin: 30px 30px 0 30px;
+            margin: 30px 50px 0 30px;
             transition: .5s ease;
             backface-visibility: hidden;
         }
@@ -65,13 +71,18 @@
         }
 
 
-        .row {
-            display: flex;
-        }
-
         /* Create three equal columns that sits next to each other */
         .column {
-            flex: 33.33%;
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /* Clear floats after image containers */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
         }
 
         a.waves-effect{
@@ -86,19 +97,50 @@
 <body>
 
 
-<div class="row">
-    <div class="column">
-        <a class="waves-effect" href="https://vermilionathletics.org/" target="_blank"><img class="vermilion" style="width: 15%" src="video/vermilion.jpg"></a>
-        <a class="waves-effect" href="https://www.24-7Team.com" target="_blank"><img class="logo" src="video/logo.png"></a>
-        <a class="waves-effect" href="http://greatercleveland.yourkwoffice.com/" target="_blank"><img class="kellerWilliams" src="video/kellerWilliams.png"></a>
-    </div>
+<!--<div class="row">-->
+<!--    <div class="column">-->
+<!--        <a class="waves-effect" href="https://vermilionathletics.org/" target="_blank"><img class="vermilion" style="width: 15%" src="video/vermilion.jpg"></a>-->
+<!--        <a class="waves-effect" href="https://www.24-7Team.com" target="_blank"><img class="logo" src="video/logo.png"></a>-->
+<!--        <a class="waves-effect" href="http://greatercleveland.yourkwoffice.com/" target="_blank"><img class="kellerWilliams" src="video/kellerWilliams.png"></a>-->
+<!--    </div>-->
+<!---->
+<!--</div>-->
 
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col-lg">-->
+<!--            <a class="waves-effect" href="https://vermilionathletics.org/" target="_blank"><img class="vermilion" style="width: 15%" src="video/vermilion.jpg"></a>-->
+<!--        </div>-->
+<!--        <div class="col-lg">-->
+<!--            <a class="waves-effect" href="https://www.24-7Team.com" target="_blank"><img class="logo" src="video/logo.png"></a>-->
+<!--        </div>-->
+<!--        <div class="col-lg">-->
+<!--            <a class="waves-effect" href="http://greatercleveland.yourkwoffice.com/" target="_blank"><img class="kellerWilliams" src="video/kellerWilliams.png"></a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="videoContainer">
+<video id="video" class="homeVideo" controls autoplay>
+    <source src="video/24-7Team.mp4" type="video/mp4">
+</video>
 </div>
 
 
-<video id="video" class="homeVideo" controls autoplay="autoplay" >
-    <source src="video/BrianVideo.mp4" type="video/mp4">
-</video>
+<div class="row">
+    <div class="column">
+        <a class="waves-effect" href="https://vermilionathletics.org/" target="_blank"><img class="vermilion" src="video/vermilion.jpg"></a>
+    </div>
+    <div class="column">
+        <a class="waves-effect" href="https://www.24-7Team.com" target="_blank"><img class="logo" src="video/logo.png"></a>
+    </div>
+    <div class="column">
+        <a class="waves-effect" href="http://greatercleveland.yourkwoffice.com/" target="_blank"><img class="kellerWilliams" src="video/kellerWilliams.png"></a>
+    </div>
+</div>
+
+
 
 
 
